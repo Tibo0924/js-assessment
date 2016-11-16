@@ -2,7 +2,7 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.regexAnswers = {
   containsNumber: function(str) {
-
+    return str.search(/\d/) !== -1  ? true : false
   },
 
   containsRepeatingLetter: function(str) {
@@ -14,7 +14,7 @@ exports.regexAnswers = {
   },
 
   captureThreeNumbers: function(str) {
-
+    
   },
 
   matchesPattern: function(str) {

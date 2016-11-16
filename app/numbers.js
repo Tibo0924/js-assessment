@@ -6,14 +6,14 @@ exports.numbersAnswers = {
   },
 
   base10: function(str) {
-    return parseInt(str,10)
+    return parseInt(str,2)
   },
 
   convertToBinary: function(num) {
-
+    return num.toString(2)
   },
 
   multiply: function(a, b) {
-    return a*b
+    return Number((a*b).toPrecision(1));
   }
 };
