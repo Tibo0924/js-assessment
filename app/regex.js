@@ -10,11 +10,12 @@ exports.regexAnswers = {
   },
 
   endsWithVowel: function(str) {
-
+    var s = str.match(/[aeiou]$/i);
+    if (s){return true}else{return false}
   },
 
   captureThreeNumbers: function(str) {
-    
+
   },
 
   matchesPattern: function(str) {
@@ -22,6 +23,6 @@ exports.regexAnswers = {
   },
 
   isUSD: function(str) {
-
+    
   }
 };
