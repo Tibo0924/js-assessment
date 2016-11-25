@@ -10,14 +10,14 @@ exports.functionsAnswers = {
   },
 
   functionFunction: function(str) {
-
+    var a = str;
+    return function ab(str){
+      return (a+", "+str);
+    }
   },
 
   makeClosures: function(arr, fn) {
-    var x = 2;
-    function functionName() {
-
-    }
+    return arr.map(n => {return function(){ return fn(n)} })
   },
 
   partial: function(fn, str1, str2) {
@@ -25,7 +25,9 @@ exports.functionsAnswers = {
   },
 
   useArguments: function() {
-
+    var s = Array.from(arguments);
+    s = s.reduce((a,b) => a+b);
+    return s
   },
 
   callIt: function(fn) {
