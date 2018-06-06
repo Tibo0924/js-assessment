@@ -1,3 +1,4 @@
+'esversion:6'
 exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
@@ -8,7 +9,7 @@ exports.arraysAnswers = {
   sum: function (arr) {
     var total = 0;
     for (var i = 0; i < arr.length; i++) {
-      total += arr[i]
+      total += arr[i];
     }
     return total;
   },
@@ -26,7 +27,7 @@ exports.arraysAnswers = {
   removeWithoutCopy: function (arr, item) {
     for (var i = 0; i < arr.length; i++) {
       if (arr[i] === item) {
-        arr.splice(i, 1)
+        arr.splice(i, 1);
         this.removeWithoutCopy(arr, item)
       }
     }
@@ -63,7 +64,7 @@ exports.arraysAnswers = {
   },
 
   count: function (arr, item) {
-    let occ = 0;
+    var occ = 0;
     for(var i = 0; i < arr.length; i++){
       if(arr[i]===item){
         occ++;
@@ -74,21 +75,30 @@ exports.arraysAnswers = {
   },
 
   duplicates: function (arr) {
-    for(var i = 0 ; i < arr. length; i++){
-      if (arr.indexOf(i) !== arr.lastindexOf(i)) {
-        console.log(i)
+    var array = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr.indexOf(i) !== arr.lastIndexOf(i)) {
+        array.push(arr[i]);
       }
     }
-    
-   
-
+    return array;
   },
 
   square: function (arr) {
+    return arr.map((element) => {
+      return element * element;
+    });
 
   },
 
   findAllOccurrences: function (arr, target) {
+    var all = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        all.push(arr[i]);
+      }
+    }
+    return all.length;
 
   }
 };

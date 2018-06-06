@@ -10,14 +10,14 @@ exports = typeof window === 'undefined' ? global : window;
 exports.bestPracticesAnswers = {
   globals: function() {
     myObject = {
-      name: 'Jory'
+      name: 'Jory',
     };
 
     return myObject;
   },
 
   parseInt: function(num) {
-    return parseInt(num);
+    return parseInt(num); 
   },
 
   identity: function(val1, val2) {
